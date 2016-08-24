@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var MeasurementSchema = new mongoose.Schema({
+var StatisticsSchema = new mongoose.Schema({
     // ping in ms
     ping: {
         type: Number,
@@ -23,4 +23,4 @@ var MeasurementSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('measurement', MeasurementSchema);
+module.exports = mongoose.model('statistics', StatisticsSchema);
