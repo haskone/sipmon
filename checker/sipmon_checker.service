@@ -1,0 +1,10 @@
+[Unit]
+Description=SIPMON SIP Registration Checker
+Requires=After=mongod.service       # Requires the mongodb server
+
+[Service]
+ExecStart=/usr/local/bin/node /opt/sipmon/Checker.js
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=sipmon
+Environment=NODE_ENV=production PORT=1337

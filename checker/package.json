@@ -1,0 +1,21 @@
+{
+  "name": "sipmon_checker",
+  "version": "1.0.0",
+  "description": "Gather and save data for monitoring",
+  "main": "Checker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sip",
+    "sipster"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "mongoose": "^4.6.0",
+    "util": "^0.10.3",
+    "winston": "^2.2.0"
+  }
+}
