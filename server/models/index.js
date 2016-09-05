@@ -1,4 +1,6 @@
-module.exports = {
-    server: require('./Server.js'),
-    measurement: require('./Measurements.js')
+module.exports = function(mongoose) {
+    return {
+        server: require('./Server.js')(mongoose),
+        statistics: require('./Statistics.js')(mongoose)
+    };
 };

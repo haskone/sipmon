@@ -19,12 +19,12 @@ app.use(function(req, res, next) {
     next();
 });
 
-var config = require('./config');
+var config = require('../config');
 
 mongoose.connect(config.mongodbUrl);
 mongoose.connection.once('open', function() {
 
-    app.models = require('./models/index');
+    app.models = require('./models/index')(mongoose);
     var routes = require('./routes');
 
     _.each(routes, function(controller, route) {
