@@ -1,9 +1,9 @@
 [Unit]
 Description=SIPMON SIP Registration Checker
-Requires=After=mongod.service       # Requires the mongodb server
+Requires=After=mongod.service
 
 [Service]
-ExecStart=/usr/local/bin/node /opt/sipmon/Checker.js
+ExecStart=/usr/local/bin/node /opt/sipmon/checker.js
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=sipmon

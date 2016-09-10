@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-cp Checker.js /opt/sipmon/Checker.js
+cp checker.js /opt/sipmon/checker.js
 cp sipmon_checker.service /etc/systemd/system/sipmon_checker.service
