@@ -21,5 +21,5 @@ module.exports = function(mongoose) {
             required: true
         }
     });
-    return mongoose.model('stat', StatSchema);
+    return mongoose.model('stat', StatSchema, 'stat');
 };

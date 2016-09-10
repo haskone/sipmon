@@ -18,5 +18,5 @@ module.exports = function(mongoose) {
             required: true
         }
     });
-    return mongoose.model('server', ServerSchema);
+    return mongoose.model('server', ServerSchema, 'server');
 };
