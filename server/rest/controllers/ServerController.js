@@ -6,7 +6,7 @@ module.exports = function(app, route) {
     Resource(app, '/server/:serverId', 'stat', app.models.stat).rest({
         before: function(req, res, next) {
             req.body.parent = req.params.serverId;
-            req.modelQuery = this.model.where('parent', req.params.parentId);
+            req.modelQuery = this.model.where('parent', req.params.serverId);
             next();
         }
     });
