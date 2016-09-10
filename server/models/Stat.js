@@ -1,5 +1,5 @@
 module.exports = function(mongoose) {
-    var StatisticsSchema = new mongoose.Schema({
+    var StatSchema = new mongoose.Schema({
         // ping in ms
         ping: {
             type: Number,
@@ -16,10 +16,10 @@ module.exports = function(mongoose) {
         },
         parent: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Server',
+            ref: 'server',
             index: true,
             required: true
         }
     });
-    return mongoose.model('statistics', StatisticsSchema);
+    return mongoose.model('stat', StatSchema);
 };
